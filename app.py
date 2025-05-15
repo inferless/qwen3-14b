@@ -25,7 +25,7 @@ class ResponseObjects(BaseModel):
 class InferlessPythonModel:
   def initialize(self):
     model_id = "Qwen/Qwen3-14B"
-    self.llm = LLM(model=model_id,max_model_len=512,dtype="float16")
+    self.llm = LLM(model=model_id,enforce_eager=True,max_model_len=512,dtype="float16")
     self.tokenizer = AutoTokenizer.from_pretrained(model_id)
 
   def infer(self, request: RequestObjects) -> ResponseObjects:
