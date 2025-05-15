@@ -1,0 +1,8 @@
+build:
+  cuda_version: "12.1.1"
+  python_packages:
+    - vllm==0.8.5.post1
+    - hf-transfer==0.1.9
+    - inferless==0.2.13
+    - pydantic==2.10.2
+
